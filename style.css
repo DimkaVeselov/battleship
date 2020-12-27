@@ -13,9 +13,10 @@ body {
 
 .messageArea {
   position: absolute;
-  top: 0;
+  bottom: 30px;
   left: 0;
-  color: rgba(83, 175, 19, .1);
+  color: rgba(83, 175, 19, .5);
+  font-size: 3em;
 }
 
 .hit {
