@@ -110,7 +110,7 @@ let controller = {
       this.guesses++;
       let hit = model.fire(location);
       if (hit && model.shipsSunk === model.numShips) {
-          view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
+          alert("Ты потопил все мои линкоры в " + this.guesses + " ходов");
       }
     }
   }
@@ -126,9 +126,9 @@ function parseGuess(guess) {
     let row = alphabet.indexOf(firstChar);
     let column = guess.charAt(1);
     if (isNaN(row) || isNaN(column)) {
-      alert('Ой, этого нет на доске');
+      view.displayMessage('Ой, этого нет на доске');
     } else if (row < 0 || row >= model.boardSize || column < 0 || column >= model.boardSize) {
-      alert('Ой, это вне доски');
+      view.displayMessage('Ой, это вне доски');
     } else {
       return row + column;
     }
